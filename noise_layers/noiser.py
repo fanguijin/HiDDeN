@@ -10,7 +10,7 @@ class Noiser(nn.Module):
     This module allows to combine different noise layers into a sequential noise module. The
     configuration and the sequence of the noise layers is controlled by the noise_config parameter.
     """
-    def __init__(self, noise_layers: list, device = torch.device('gpu')):
+    def __init__(self, noise_layers: list, device = torch.device('cuda:0')):
         super(Noiser, self).__init__()
         self.noise_layers = [Identity()]
         for layer in noise_layers:
