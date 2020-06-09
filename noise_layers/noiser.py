@@ -3,7 +3,7 @@ import torch.nn as nn
 from noise_layers.identity import Identity
 from noise_layers.jpeg_compression import JpegCompression
 from noise_layers.quantization import Quantization
-
+import torch
 
 class Noiser(nn.Module):
     """
